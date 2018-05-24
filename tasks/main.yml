@@ -1,0 +1,11 @@
+- name: add an apt key
+  apt_key: keyserver=keyserver.ubuntu.com id=E0C56BD4
+
+- name: install a repo
+  apt_repository: repo="deb http://repo.yandex.ru/clickhouse/deb/stable/ main/"
+
+- name: install clickhouse-server
+  apt: name=clickhouse-server
+
+- name: install clickhouse-client
+  apt: name=clickhouse-client
